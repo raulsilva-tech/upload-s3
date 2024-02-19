@@ -1,0 +1,4 @@
+AWS:
+- IAM: create new user and/or generate new key
+- then copy the user keys and put into the code
+- create a new bucket on S3
