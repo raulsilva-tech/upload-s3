@@ -24,8 +24,8 @@ func init() {
 		&aws.Config{
 			Region: aws.String("us-east-1"),
 			Credentials: credentials.NewStaticCredentials(
-				"AKIA6ODU7MY3HT3UVQOX",
-				"6x8LS7+MFvY7tzeJHz+yRAerOErY81B6Zh+rKkBi",
+				"",
+				"",
 				"",
 			),
 		},
