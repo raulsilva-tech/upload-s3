@@ -13,7 +13,7 @@ func main() {
 			panic(err)
 		}
 		defer f.Close()
-		f.WriteString("Hello, World")
+		f.WriteString("Hello, World!")
 		i++
 	}
 }

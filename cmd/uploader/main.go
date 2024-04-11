@@ -34,7 +34,7 @@ func init() {
 		panic(err)
 	}
 	s3Client = s3.New(sess)
-	s3Bucket = "rps-bucket-test"
+	s3Bucket = "rps-bucket-test2"
 }
 func main() {
 
