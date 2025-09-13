@@ -52,16 +52,13 @@ func main() {
 
 	// new anon func to check if a file was not uploaded then try to upload it again
 	go func() {
-		for {
-			select {
-			case fileName := <-errorFileUpload:
-				wg.Add(1)
-				uploadControl <- struct{}{}
-				go uploadFile(fileName, uploadControl, errorFileUpload)
-			}
+		for fileName := range errorFileUpload {
+			wg.Add(1)
+			uploadControl <- struct{}{}
+			go uploadFile(fileName, uploadControl, errorFileUpload)
 		}
 	}()
-
+	
 	//reading all files from directory
 	for {
 		//reading only the first file found

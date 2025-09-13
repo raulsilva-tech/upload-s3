@@ -12,8 +12,8 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
-		defer f.Close()
 		f.WriteString("Hello, World!")
+		f.Close()
 		i++
 	}
 }
